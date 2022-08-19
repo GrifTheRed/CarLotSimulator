@@ -6,7 +6,7 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
-            //TODO
+            //Done
 
             //Create a seperate class file called Car
             //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
@@ -15,12 +15,42 @@ namespace CarLotSimulator
 
 
             //Now that the Car class is created we can instanciate 3 new cars
+           
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            //Dot notation
+            var dereksCar = new Car();
+            dereksCar.Make = "Chevy";
+            dereksCar.Model = "C8";
+            dereksCar.Year = 2021;
+            dereksCar.EngineNoise = "chop, chop, chop";
+            dereksCar.HonkNoise = "Beep";
+            dereksCar.IsDrivable = true;
+
+            //Object Initializer Syntax
+            var wifesCar = new Car()
+            {
+                Year = 2022,
+                Make = "Mercedes",
+                Model = "G-Wagon",
+                EngineNoise = "Vroom",
+                HonkNoise = "Honk",
+                IsDrivable = true
+            };
+
+            //Custom Constructor
+            var dailyCar = new Car(2022, "Ford", "F-150", "Whistle", "Honk", true);
+
+            //call methods
+
+            dereksCar.MakeEngineNoise();
+            wifesCar.MakeEngineNoise();
+            dailyCar.MakeEngineNoise();
+
             //*************BONUS*************//
 
-            // Set the properties utilizing the 3 different ways we learned about, one way for each car
+            //Done Set the properties utilizing the 3 different ways we learned about, one way for each car
 
             //*************BONUS X 2*************//
 
